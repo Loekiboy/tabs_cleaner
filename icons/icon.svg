@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="128" y2="128">
+      <stop offset="0%" stop-color="#1a1a2e"/>
+      <stop offset="100%" stop-color="#0f1423"/>
+    </linearGradient>
+    <linearGradient id="broom" x1="40" y1="10" x2="90" y2="100">
+      <stop offset="0%" stop-color="#00d4ff"/>
+      <stop offset="100%" stop-color="#0044ff"/>
+    </linearGradient>
+    <linearGradient id="handle" x1="70" y1="20" x2="110" y2="60">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#88aaff"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <!-- Background -->
+  <rect width="128" height="128" rx="32" fill="url(#bg)"/>
+  
+  <!-- Outer glow ring -->
+  <circle cx="64" cy="64" r="48" fill="none" stroke="#00d4ff" stroke-width="2" opacity="0.3" filter="url(#glow)"/>
+  
+  <!-- Broom Brush -->
+  <path d="M42 66 L68 92 C58 108 38 114 24 108 C14 102 12 84 26 68 Z" fill="url(#broom)" filter="url(#glow)"/>
+  
+  <!-- Broom Handle -->
+  <path d="M60 84 L104 40 C108 36 108 30 104 26 C100 22 94 22 90 26 L46 70" fill="url(#handle)"/>
+  
+  <!-- Magic Sparkles -->
+  <circle cx="86" cy="30" r="4" fill="#fff" filter="url(#glow)"/>
+  <path d="M86 20 L86 40 M76 30 L96 30" stroke="#fff" stroke-width="2"/>
+  
+  <circle cx="34" cy="50" r="3" fill="#00d4ff" filter="url(#glow)"/>
+  <circle cx="100" cy="74" r="5" fill="#00d4ff" filter="url(#glow)"/>
+  
+  <!-- Streaks -->
+  <path d="M24 108 L16 116" stroke="#00d4ff" stroke-width="4" stroke-linecap="round" filter="url(#glow)"/>
+  <path d="M36 114 L30 120" stroke="#0055ff" stroke-width="4" stroke-linecap="round"/>
+</svg>
