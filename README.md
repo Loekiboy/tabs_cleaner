@@ -11,10 +11,26 @@ A small Chrome/Edge extension that uses [Gemini](https://gemini.google.com/) to 
 > **Important**: The extension opens a background Gemini tab and closes it automatically when the response arrives.
 
 ## How to use
-1. Install the extension locally (load unpacked extension in Chrome/Edge).
-2. Click the extension icon to open the popup.
-3. Describe what you want removed (e.g. "close all tabs not related to work" or "close tabs I haven’t used in 24 hours").
-4. The extension will automatically close matching tabs and show what was closed.
+
+The extension currently works on Chrome/Edge and Firefox.
+
+### Install via ZIP (recommended for Chrome/Edge/Firefox)
+Chrome often blocks external `.crx` files, so the simplest method is to load the `.zip` or use the folder locally:
+1. Download or clone this repository (or download the `tabs_cleaner.zip` file).
+2. **Chrome(based)/Edge**:
+   - Open `chrome://extensions/` or `edge://extensions/`
+   - Enable **Developer mode** in the top-right.
+   - Click **Load unpacked** and select the extracted folder.
+3. **Firefox**:
+   - Open `about:debugging#/runtime/this-firefox`
+   - Click **Load Temporary Add-on...**
+   - Select the `manifest.json` file (or the `tabs_cleaner.zip`).
+
+### Install via CRX in Opera
+Opera allows direct installation of `.crx` files for convenience:
+1. Download the `tabs_cleaner.crx` file.
+2. Approve the installation when prompted.
+Note: the .crx file doesn´t work in any other browser so far I tested.
 
 ## 🧠 What Gemini sees (in the prompt)
 The extension sends Gemini a list of all open tabs including:
